@@ -50,7 +50,7 @@ web socketのサーバを操作して、端末側の画面を切り替えます
   - client/questions.json
 
 - サーバーを立ち上げる
-  - server/README.md#使い方
+  - https://github.com/kengo92i/QuizEventApp/blob/master/server/README.md#使い方
 
 - スマホからサーバーにアクセス
   - ログイン後、待機画面が出ます。
