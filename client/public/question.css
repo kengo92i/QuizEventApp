@@ -1,0 +1,102 @@
+.question .row {
+  padding-bottom: 60px;
+}
+
+.question footer {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 40px;
+  background: #555;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#fdc82f+0,fdc82f+25,dc0451+26,dc0451+50,ff7900+51,ff7900+75,5bbbbf+76,5bbbbf+100 */
+  background: #fdc82f; /* Old browsers */
+  background: -moz-linear-gradient(left, #fdc82f 0%, #fdc82f 25%, #dc0451 26%, #dc0451 50%, #ff7900 51%, #ff7900 75%, #5bbbbf 76%, #5bbbbf 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, #fdc82f 0%,#fdc82f 25%,#dc0451 26%,#dc0451 50%,#ff7900 51%,#ff7900 75%,#5bbbbf 76%,#5bbbbf 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, #fdc82f 0%,#fdc82f 25%,#dc0451 26%,#dc0451 50%,#ff7900 51%,#ff7900 75%,#5bbbbf 76%,#5bbbbf 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fdc82f', endColorstr='#5bbbbf',GradientType=1 ); /* IE6-9 */
+  border-top: 5px solid #fff;
+
+}
+
+.panel-standby {
+  margin-top: 10%;
+  background: #fff !important;
+  color: #363636;
+  border: 3px solid #363636;
+  border-radius: 0px;
+}
+
+.panel-question-title {
+  margin-top: 10%;
+  background: #fff !important;
+  color: #363636;
+  border: 3px solid #363636;
+  border-radius: 0px;
+}
+
+.panel-question {
+  margin-top: 10%;
+  padding: 5px;
+  padding-top: 25px;
+  background: #fff !important;
+  color: #363636;
+  border: 3px solid #363636;
+  border-radius: 0px;
+}
+
+.panel-question .list-group-item.active {
+  background: #FF7900;
+  border-color: #FF7900;
+}
+
+.panel-question #answer {
+  margin-top: 20px;
+  width: 100%;
+}
+
+.panel-correct {
+  margin-top: 20px;
+  background: #fff !important;
+  color: #363636;
+  border: 5px solid #363636;
+  border-radius: 0px;
+}
+
+.panel-wrong {
+  margin-top: 20px;
+  background: #fff !important;
+  color: #363636;
+  border: 5px solid #363636;
+  border-radius: 0px;
+}
+
+/* 点滅 */
+.blinking {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  -webkit-animation: switchtext 0.5s linear 5;
+  -moz-animation: switchtext 0.5s linear 5;
+  animation: switchtext 0.5s linear 5;
+}
+@-webkit-keyframes switchtext {
+  0% { background: #DC0451; }
+  33% { background: #5BBBBF; }
+  66% { background: #FDC82F; }
+  100% { background: #FF7900; }
+}
+@-moz-keyframes switchtext {
+  0% { background: #DC0451; }
+  33% { background: #5BBBBF; }
+  66% { background: #FDC82F; }
+  100% { background: #FF7900; }
+}
+@keyframes switchtext {
+  0% { background: #DC0451; }
+  33% { background: #5BBBBF; }
+  66% { background: #FDC82F; }
+  100% { background: #FF7900; }
+}

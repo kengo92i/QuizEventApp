@@ -1,0 +1,11 @@
+.login .panel {
+  margin-top: 40%;
+  padding-top: 10px;
+  background: #fff;
+  border: 5px solid #363636;
+  border-radius: 0px;
+}
+
+.start-button {
+  margin-top: 25px;
+}

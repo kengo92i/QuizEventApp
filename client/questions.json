@@ -1,0 +1,33 @@
+[
+  {
+    "id": 1,
+    "choices": [
+      "①人生とは何か",
+      "②平和とは何か",
+      "③家族とは何か",
+      "④特に何も考えていない"
+    ],
+    "answer": 4,
+    "description": "ロダン作の彫刻「考える人」は、何を考えているでしょうか？"
+  },
+  {
+    "id": 2,
+    "choices": [
+      "answer 1",
+      "answer 2",
+      "answer 3",
+      "answer 4"
+    ],
+    "answer": 2,
+    "description": "Question 2"
+  },
+  {
+    "id": 3,
+    "choices": [
+      "answer 1",
+      "answer 2"
+    ],
+    "answer": 2,
+    "description": "Question 3"
+  }
+]

@@ -1,0 +1,30 @@
+.panel-ranking {
+  margin-top: 10px;
+  padding-bottom: 10px;
+  background: #fff !important;
+  color: #363636;
+  border: 3px solid #363636;
+  border-radius: 0px;
+}
+
+.panel-top5 {
+  margin-top: 10px;
+  padding: 20px;
+  background: #fff !important;
+  color: #363636;
+  border: 3px solid #363636;
+  border-radius: 0px;
+}
+
+.one-more-thing {
+  margin-top: 40px;
+}
+
+.ranking .list-group-item {
+  border: 3px solid #363636;
+  border-radius: 0px;
+}
+
+.ranking .list-group-item:first-child {
+  color: #5BBBBF;
+}
