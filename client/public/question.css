@@ -20,7 +20,7 @@
 }
 
 .panel-standby {
-  margin-top: 10%;
+  margin-top: 40px;
   background: #fff !important;
   color: #363636;
   border: 3px solid #363636;
@@ -28,7 +28,7 @@
 }
 
 .panel-question-title {
-  margin-top: 10%;
+  margin-top: 40px;
   background: #fff !important;
   color: #363636;
   border: 3px solid #363636;
@@ -36,7 +36,7 @@
 }
 
 .panel-question {
-  margin-top: 10%;
+  margin-top: 40px;
   padding: 5px;
   padding-top: 25px;
   background: #fff !important;
@@ -51,12 +51,12 @@
 }
 
 .panel-question #answer {
-  margin-top: 20px;
+  margin-top: 40px;
   width: 100%;
 }
 
 .panel-correct {
-  margin-top: 20px;
+  margin-top: 40px;
   background: #fff !important;
   color: #363636;
   border: 5px solid #363636;
@@ -64,7 +64,7 @@
 }
 
 .panel-wrong {
-  margin-top: 20px;
+  margin-top: 40px;
   background: #fff !important;
   color: #363636;
   border: 5px solid #363636;
@@ -78,9 +78,9 @@
   left: 0;
   bottom: 0;
   right: 0;
-  -webkit-animation: switchtext 0.5s linear 5;
-  -moz-animation: switchtext 0.5s linear 5;
-  animation: switchtext 0.5s linear 5;
+  -webkit-animation: switchtext 0.5s linear 8;
+  -moz-animation: switchtext 0.5s linear 8;
+  animation: switchtext 0.5s linear 8;
 }
 @-webkit-keyframes switchtext {
   0% { background: #DC0451; }
