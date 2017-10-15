@@ -1,5 +1,6 @@
 body {
-  background: #FDC82F;
+  /*background: #FDC82F;*/
+  background-image: url('bg.png');
   background-size: cover;
   background-position: center;
 }
