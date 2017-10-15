@@ -7,6 +7,7 @@ import ConsoleRoot from "./console/buttons/Root";
 import RankingRoot from "./console/ranking/Root";
 import RankingTop5Root from "./console/rankingTop5/Root";
 import RankingActionRoot from "./console/rankingAction/Root";
+import RankingEachQuestion from "./console/rankingEachQuestion/Root";
 import NoukaiRoot from "./noukai-app/question/Root";
 import LoginRoot from "./noukai-app/login/Root";
 import {Provider} from "react-redux";
@@ -20,6 +21,7 @@ ReactDOM.render(
                 <Route path={Paths.CONSOLE} component={ConsoleRoot} />
                 <Route path={Paths.RANKING} component={RankingRoot} />
                 <Route path={Paths.MOST_CLICKER} component={RankingActionRoot} />
+                <Route path={Paths.RANKING_EACH_QUESTION} component={RankingEachQuestion} />
                 <Route path={Paths.RANKING_TOP5} component={RankingTop5Root} />
                 <Route path={Paths.NOUKAI_LOGIN} component={LoginRoot} />
                 <Route path={Paths.NOUKAI} component={NoukaiRoot} />

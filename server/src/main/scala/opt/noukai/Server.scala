@@ -44,6 +44,14 @@ trait NoukaiServer extends Directives {
             case Failure(e) => onError(e)
           }
         } ~
+        path("rankListEachQuestion" / IntNumber) { n =>
+          onComplete(noukai.getRanksEachQuestion(50, n)) {
+            case Success(list) =>
+              HttpEntity(ContentTypes.`application/json`, s"""[${list.map(_.asJson.toString).mkString(", ") }]""") |>
+              toComplete
+            case Failure(e) => onError(e)
+          }
+        } ~
         path("mostClicker") {
           onComplete(noukai.getClicker) {
             case Success(clicker) =>

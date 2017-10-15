@@ -25,6 +25,7 @@ trait NoukaiQuiz {
   def answeringProblem(id: Int): Unit
 
   def getRanks(max: Int): Future[Seq[Score]]
+  def getRanksEachQuestion(max: Int, qnum: Int): Future[Seq[Score]]
   def getClicker: Future[Clicker]
   def getUserSize: Future[Int]
 }
@@ -91,6 +92,33 @@ object NoukaiQuiz {
             id -> (
               rwList.count(identity),
               (durs.map { dur => dur.getSeconds + dur.getNano / 1000000 / 1000.0 }.sum * 1000).toInt / 1000.0
+            )
+          }
+        }.toList.sequence.map(_.sortWith { case((_, (r1, t1)), (_, (r2, t2))) =>
+            if(r1 == r2) t1 < t2 else r1 > r2
+        })
+      }
+        yield
+          validityRanking.take(max).zipWithIndex.map { case ((Identify(dept, name), (corrects, dur)), i) =>
+            Score(i+1, s"$name（$dept）", corrects, dur)
+          } |> { list =>
+            val size = list.length
+            if(size >= max )
+              list
+            else
+              list ++ (size + 1 to max).map { i => Score(i, "-", 0, 9999.999) }
+          }
+      
+      override def getRanksEachQuestion(max: Int = 50, qnum: Int): Future[Seq[Score]] = for {
+        list <- makeSummary
+        validityRanking: Seq[(Identify, (Int, Double))] <- list.map { case AnswersInfo(id, ans, _) =>
+          val (pnums, rets) = ans.toList.sorted.unzip
+          val (anss, durs) = rets.unzip
+          val dur = durs.apply(qnum-1)
+          (correctAnswers ? QueryAnswersEachQuestion(pnums, anss, qnum)).map { case ResultAnswers(rwList) =>
+            id -> (
+              rwList.count(identity),
+              ((dur.getSeconds + dur.getNano / 1000000 / 1000.0) * 1000).toInt / 1000.0
             )
           }
         }.toList.sequence.map(_.sortWith { case((_, (r1, t1)), (_, (r2, t2))) =>

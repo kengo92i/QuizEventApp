@@ -1,6 +1,7 @@
 export class Paths{
     static CONSOLE = 'console';
     static RANKING = 'ranking';
+    static RANKING_EACH_QUESTION = 'ranking/each_question/:questionNum';
     static RANKING_TOP5 = 'ranking/:rank';
     static MOST_CLICKER = 'ranking/action';
     static NOUKAI = 'noukai/:userId/:dept';

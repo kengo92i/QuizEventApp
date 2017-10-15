@@ -68,6 +68,20 @@ export class DispatchActions {
       .then(successCB)
       .catch(failCB)
   }
+  
+  public rankListEachQuestion(num : number) {
+    const successCB = (response: IResponse):Promise<void> => {
+      if(response.status === 200){
+        return response.json<Score[]>().then(json => this.dispatch({ type: ActionTypes.SHOW_RANKING, ranking: json}));
+      }
+      this.dispatch({ type: ActionTypes.HTTP_FAILURE, msg: 'rankListEachQuestion command is failed!'});
+      return
+    };
+
+    return fetch(`/api/rankListEachQuestion/${num}`, {method: 'GET'})
+      .then(successCB)
+      .catch(failCB)
+  }
 
   public fetchMostClicker() {
     const successCB = (response: IResponse):Promise<void> => {
