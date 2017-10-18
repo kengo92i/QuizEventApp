@@ -45,7 +45,7 @@ trait NoukaiServer extends Directives {
           }
         } ~
         path("rankListEachQuestion" / IntNumber) { n =>
-          onComplete(noukai.getRanksEachQuestion(50, n)) {
+          onComplete(noukai.getRanksEachQuestion(10, n)) {
             case Success(list) =>
               HttpEntity(ContentTypes.`application/json`, s"""[${list.map(_.asJson.toString).mkString(", ") }]""") |>
               toComplete
