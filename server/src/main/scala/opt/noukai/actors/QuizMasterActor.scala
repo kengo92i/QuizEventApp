@@ -42,6 +42,7 @@ class QuizMasterActor extends Actor {
     case a@AnswerReach(id, _, _) =>
       answeredNumber += 1
       answerers.get(id).foreach(_ ! a)
+      println(s"[info] Answer result = $a")
       answerers.values.foreach(_ ! SomeoneAnswered(answeredNumber))
     // アクションボタンが押された
     case a@ActionButtonPushed(id) =>

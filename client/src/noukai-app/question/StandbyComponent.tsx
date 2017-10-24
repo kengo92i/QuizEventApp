@@ -22,7 +22,7 @@ export default class StandbyComponent extends React.Component<Props, {}> {
                 <div className="row">
                     <div className="blinking"></div>
                     <div className="panel panel-correct panel-default col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1">
-                        <h3 className="text-center">流石です！！！</h3>
+                        <h3 className="text-center">さすがです！！！</h3>
                         <img src="/public/maru.png" className="center-block img-responsive" />
                     </div>
                 </div>
